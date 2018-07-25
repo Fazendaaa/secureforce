@@ -1,0 +1,36 @@
+{
+    "bail": true,
+    "expand": true,
+    "verbose": true,
+    "name": "secureforce",
+    "useStderr": true,
+    "forceExit": true,
+    "logHeapUsage": true,
+    "collectCoverage": true,
+    "testRegex": "(./ci/__tests__/.*| (\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+    },
+    "coverageReporters": [
+        "json",
+        "lcov",
+        "text"
+    ],
+    "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "node"
+    ],
+    "coveragePathIgnorePatterns": [
+        "./dist/",
+        "./node_modules/"
+    ],
+    "globals": {
+        "ts-jest": {
+            "enableTsDiagnostics": true
+        }
+    }
+}
